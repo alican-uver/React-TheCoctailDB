@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Company = () => {
   return (
     <CarouselWrapper>
-      <Carousel dotPosition="right">
+      <Carousel dotPosition="right" autoplay>
         {companies.map((company) => {
           return (
             <div key={company.id}>
@@ -32,7 +32,7 @@ const CarouselWrapper = styled.div`
     width: 100%;
     height: 500px;
     text-align: center;
-    background: #364d79;
+    background: #021529;
     overflow: hidden;
     color: #fff;
     padding: 30px;
