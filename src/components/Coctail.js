@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Card } from "antd";
 
-const Coctail = () => {
-    return (
-        <div>
-            Coctail.js
-        </div>
-    )
-}
+const Coctail = (props) => {
+  const { name, image, info, glass } = props;
 
-export default Coctail
+  return (
+    <Card hoverable cover={<img src={image} alt="coctail" />}>
+      <Card.Meta title={name} description={glass} />
+    </Card>
+  );
+};
+
+export default Coctail;

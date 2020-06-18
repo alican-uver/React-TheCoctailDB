@@ -5,8 +5,7 @@ import Company from "../components/Company";
 const About = () => {
   return (
     <AboutWrapper>
-      <h1 className="section-title">About Us</h1>
-      <h2 className="section-companies">Companies we work for</h2>
+    <h2 className="section-companies">Companies we work for</h2>
       {/* Company Carousel */}
       <Company />
       <p className="section-content">
