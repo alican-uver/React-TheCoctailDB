@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { CoctailProvider } from './context/ContextCoctail';
 
 // Pages
 import Home from './pages/Home';
@@ -12,15 +13,17 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/cocktail/:id" component={SingleCoctail} />
-        <Route path="*" component={NotFound} />
-      </Switch>
-    </Router>
+    <CoctailProvider>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/cocktail/:id" component={SingleCoctail} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Router>
+    </CoctailProvider>
   );
 }
 
