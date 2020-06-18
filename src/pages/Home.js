@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import CoctailList from '../components/CoctailList';
+import SearchForm from '../components/SearchForm';
 
 const Home = () => {
+
     return (
-        <div>
-            Home.js
-        </div>
+        <main>
+            <SearchForm />
+            <CoctailList />
+        </main>
     )
 }
 
