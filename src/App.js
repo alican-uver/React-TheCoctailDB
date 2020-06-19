@@ -6,7 +6,7 @@ import { CoctailProvider } from './context/ContextCoctail';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import SingleCoctail from './pages/SingleCoctail';
+import SingleCocktail from './pages/SingleCocktail';
 
 // Navbar
 import Navbar from './components/Navbar';
@@ -19,8 +19,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/cocktail/:id" component={SingleCoctail} />
-          <Route path="*" component={NotFound} />
+          <Route exact path="/cocktail/:id" component={SingleCocktail} />
+          <Route path="*" component = {NotFound} />
         </Switch>
       </Router>
     </CoctailProvider>
