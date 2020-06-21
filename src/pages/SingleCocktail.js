@@ -62,7 +62,6 @@ const SingleCocktail = props => {
         getSingleCocktail();
     }, [id])
     
-    console.log(cocktail)
     if (loading) {
         return <Spinner />
     }
@@ -89,6 +88,8 @@ const SingleCocktail = props => {
                             <div>Name: <span className = "cocktail-d"> {name} </span> </div>
                             <div>Category: <span className = "cocktail-d"> {category} </span> </div> 
                             <div>Glass: <span className = "cocktail-d"> {glass} </span> </div> 
+                            <div>Info: <span className = "cocktail-d"> {info} </span> </div> 
+                        {/* Modal */}
                         <Button style= {{marginTop: '15px'}} type ="default" onClick = {showModal}> Show Instructions </Button>
                         <Modal
                             title = "Instructions and Ingredients"

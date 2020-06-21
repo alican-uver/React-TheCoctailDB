@@ -5,7 +5,7 @@ export const ContextCoctail = createContext();
 export const CoctailProvider = props => {
     const [coctails, setCoctails] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState("mar");
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         setLoading(true);
@@ -36,7 +36,7 @@ export const CoctailProvider = props => {
             }
             setTimeout(() => {
                 setLoading(false);
-            }, 1000);
+            }, 500);
         }
         getDrinks();
     }, [searchTerm])
