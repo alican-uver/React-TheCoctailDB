@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import Coctail from './Coctail';
 import { ContextCoctail } from '../context/ContextCoctail';
-import { Row, Col } from 'antd';
+import { Row, Col, Spin } from 'antd';
+import styled from 'styled-components';
+import Spinner from './Spinner';
 
 const CoctailList = () => {
     const { loading, coctails } = useContext(ContextCoctail);
 
     if (loading) {
-        return <h2 style={{ textAlign: 'center' }}>Loading Coctails ...</h2>
+        return <Spinner />
     }
 
     if (coctails.length < 1) {
@@ -28,3 +30,12 @@ const CoctailList = () => {
 }
 
 export default CoctailList
+
+const SpinnerWrapper = styled.div`
+    text-align:center;
+    min-height: calc(100vh - 46px); /* For now */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+`
