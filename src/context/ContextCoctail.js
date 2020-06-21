@@ -34,7 +34,9 @@ export const CoctailProvider = props => {
             catch (error) {
                 console.log(error)
             }
-            setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+            }, 1000);
         }
         getDrinks();
     }, [searchTerm])
